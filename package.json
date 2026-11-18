@@ -1,0 +1,31 @@
+{
+  "name": "arcade-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hono backend for the Battleship game on my arcade site.",
+  "license": "MIT",
+  "author": "Honglin Wei",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch src/index.ts",
+    "start": "node src/index.ts",
+    "check": "tsc"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.8",
+    "@hono/zod-validator": "^0.9.1",
+    "@honglinwei/arcade-core": "^1.1.0",
+    "bcrypt": "^6.0.0",
+    "hono": "^4.13.19",
+    "mongodb": "^7.8.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^6.0.0"
+  }
+}
